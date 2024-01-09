@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.calendar-container {
+    margin: auto;
+    width: 80%;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
