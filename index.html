@@ -3,7 +3,7 @@
 <head>
     <title>Agile 103 Class Calendar</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Updated: Include PDF.js library from a reliable CDN -->
+    <!-- Include PDF.js library from a reliable CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
 </head>
 <body>
@@ -11,8 +11,15 @@
         <canvas id="pdf-canvas"></canvas>
     </div>
 
+    <!-- Zoom links section -->
+    <div class="zoom-links">
+        <h2>Class Links</h2>
+        <p><a href="https://us02web.zoom.us/j/85412087480" target="_blank">Weekdays Class Link</a></p>
+        <p><a href="https://us02web.zoom.us/j/82962141968" target="_blank">Weekends Class Link</a></p>
+    </div>
+
     <script>
-        // Updated: Set the path to the PDF.js worker script from CDN
+        // Set the path to the PDF.js worker script from CDN
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js';
 
         var url = 'Agile 103 January Curriculum.pdf'; // Ensure this matches your PDF file name exactly

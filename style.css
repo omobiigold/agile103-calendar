@@ -18,8 +18,35 @@ body {
     box-sizing: border-box; /* Makes sure padding and borders are included in the total width and height */
 }
 
+/* Styles for the Zoom links section */
+.zoom-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.zoom-links h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.zoom-links a {
+    color: #0000EE; /* Traditional blue color for links */
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.zoom-links a:hover, .zoom-links a:focus {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .calendar-container {
         width: 95%; /* Wider container on smaller screens */
+    }
+
+    .zoom-links a {
+        font-size: 0.9em; /* Slightly smaller font size for links on small screens */
     }
 }
