@@ -3,6 +3,7 @@
 <head>
     <title>Agile 103 Class Calendar</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Include PDF.js library -->
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
 </head>
 <body>
@@ -11,29 +12,27 @@
     </div>
 
     <script>
-        var url = 'Agile 103 January Curriculum.pdf'; // Ensure this matches your PDF file name exactly
-
-        // The workerSrc property shall be specified.
+        // Set the path to the PDF.js worker script
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
 
-        var pdfDoc = null,
-            pageNum = 1,
-            scale = 1.5, // Adjust scale for better resolution
-            canvas = document.getElementById('pdf-canvas'),
-            ctx = canvas.getContext('2d');
+        var url = 'Agile 103 January Curriculum.pdf'; // Ensure this matches your PDF file name exactly
 
         // Asynchronously loads the PDF.
         pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             pdfDoc = pdfDoc_;
 
             // Initial/first page rendering
-            renderPage(pageNum);
+            renderPage(1);
         });
 
-        function renderPage(num) {
+        function renderPage(pageNum) {
             // Get page
-            pdfDoc.getPage(num).then(function(page) {
+            pdfDoc.getPage(pageNum).then(function(page) {
+                var scale = 1.5; // Adjust scale for better resolution
                 var viewport = page.getViewport({scale: scale});
+                var canvas = document.getElementById('pdf-canvas');
+                var ctx = canvas.getContext('2d');
+
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;
 
