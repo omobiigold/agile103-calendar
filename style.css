@@ -6,7 +6,20 @@ body {
 
 .calendar-container {
     margin: auto;
-    width: 80%;
+    width: 80%; /* Adjust the width as needed */
     border: 1px solid #ddd;
     padding: 20px;
+}
+
+#pdf-canvas {
+    width: 100%; /* Make the canvas fill the container */
+    height: auto; /* Adjust height automatically */
+    border: 1px solid #ccc; /* Optional: adds a border around the PDF */
+    box-sizing: border-box; /* Makes sure padding and borders are included in the total width and height */
+}
+
+@media (max-width: 768px) {
+    .calendar-container {
+        width: 95%; /* Wider container on smaller screens */
+    }
 }
