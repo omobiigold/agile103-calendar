@@ -3,8 +3,8 @@
 <head>
     <title>Agile 103 Class Calendar</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Include PDF.js library -->
-    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <!-- Updated: Include PDF.js library from a reliable CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
 </head>
 <body>
     <div class="calendar-container">
@@ -12,8 +12,8 @@
     </div>
 
     <script>
-        // Set the path to the PDF.js worker script
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+        // Updated: Set the path to the PDF.js worker script from CDN
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js';
 
         var url = 'Agile 103 January Curriculum.pdf'; // Ensure this matches your PDF file name exactly
 
